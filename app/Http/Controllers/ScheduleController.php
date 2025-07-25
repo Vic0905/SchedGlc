@@ -24,8 +24,9 @@ class ScheduleController extends Controller
         $studentName = $request->query('student_name', '');
         $date = $request->input('schedule_date', '');
 
-        $startDate = $request->input('start_date') ?? now()->toDateString();
-        $endDate = $request->input('end_date') ?? now()->toDateString();
+        $startDate = $request->input('start_date') ?? now()->startOfWeek()->toDateString(); // Monday
+        $endDate = $request->input('end_date') ?? now()->endOfWeek(Carbon::FRIDAY)->toDateString(); // Friday
+
 
         $query = Schedule::with([
             'student',

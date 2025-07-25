@@ -104,18 +104,7 @@
                         Filter
                     </button>
                 </div>
-
-            <!-- Today's Schedule Button -->
-            <div class="flex flex-col w-full md:w-auto pt-1 md:pt-5">
-                <a href="{{ route('schedules.available') }}"
-                class="inline-flex items-center justify-center mt-5
-                    bg-gray-700 hover:bg-transparent px-5 py-2 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider
-                  border-2 border-gray-200 dark:border-gray-600 hover:border-gray-200 dark:hover:border-gray-400 text-gray-100 hover:text-gray-900 dark:text-white dark:hover:text-gray-200 rounded-lg transition ease-in duration-100">
-                    Schedule Today: {{ \Carbon\Carbon::today()->format('F d, Y') }}
-                </a>
-            </div>
         </form>
     </div>
     @endrole
-
 </div>
